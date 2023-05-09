@@ -20,8 +20,25 @@
         // echo "o valor é $num";
         // var_dump($num);
 
-    $num = (float) "950";
-    var_dump($num);
+        // $num = (float) "950";
+        // var_dump($num);
+
+        // $casado = true;
+        // var_dump($casado);
+        //print "o valor para casado é $casado"
+
+        // $vet = [6,3,'123', true];
+        // var_dump($vet);
+        
+        class pessoa{
+            private string $nome;
+        }
+        $p = new pessoa;
+        var_dump($p);
+
+
+
+
     ?>
 </body>
 </html>
