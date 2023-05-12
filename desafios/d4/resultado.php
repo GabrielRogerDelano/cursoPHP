@@ -12,13 +12,19 @@
         <h2>conversor de moedas v1.0</h2>
         <pre>
         <?php
-            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'05-05-2023\'&@dataFinalCotacao=\'05-12-2023\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+
+            $inicio = date("m-d-Y" , strtotime("-7 days "));
+            $fim = date("m-d-Y");
+            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''.$inicio.'\'&@dataFinalCotacao=\''.$fim.'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
 
             $dados = json_decode(file_get_contents($url), true);
 
-            var_dump($dados);
             $cotacao = $dados["value"][0]["cotacaoCompra"];
-            echo "<p> o valor do dolar hoje é $cotacao</p>"
+            $real = $_GET["valor"] ?? 0 ;
+            $dolar = $real/$cotacao;
+
+
+            echo "<p>Seus R$<strong>".number_format($real,2 , "," , ".")."</strong> equivalem a US$<strong>".number_format($dolar,2 , "," , ".")."</strong> </p>"
         ?>
         </pre>
         <button onclick="javascript:history.go(-1)">Voltar</button>
