@@ -11,8 +11,8 @@
     <section>
         <h2>conversor de moedas v1.0</h2>
         <form action="resultado.php" method="get">
-            <p>Quantos reais você tem na carteiro?</p>
-            <input type="number" name="valor">
+            <p>Quantos reais você tem na carteira?</p>
+            <input type="number" name="valor" step="0.01">
             <input type="submit" value="Enviar">
         </form>
     </section>

@@ -11,10 +11,14 @@
     <section>
         <h2>Trabalhando com números aleatórios</h2>
         <p>Gerando número aleatório entre 0 e 100 ...</p>
-        <?php 
-            echo "O número gerado foi <strong>" . rand(1,100) . "</strong>"; 
+        <?php
+            $min = 0;
+            $max = 100;
+
+            echo "O número gerado foi <strong>" . mt_rand($min, $max) . "</strong>"; 
+            //randow_int = gera numeors aettorios criptograficamente seguros
         ?>
-        <input type="submit" value="Gerar outro" >
+        <input type="submit" onclick="javascript:document.location.reload()" value="Gerar outro" >
     </section>
 </body>
 </html>

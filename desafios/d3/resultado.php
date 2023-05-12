@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <section>
+    <main>
         <h2>conversor de moedas v1.0</h2>
         <?php
-            $valor = $_GET["valor"]; 
+            $valor = $_GET["valor"] ?? 0; 
             $cotacaoFixa = 5.22;
 
-            echo "<p>Seus R$<strong> $valor </strong> equivalem a U$ <strong>" . number_format($valor/$cotacaoFixa,2) . "</strong></p>";
+
+
+            //tem que ativar o insternallization do php
+            //$padrao = numfmt_create("pt_BR" , NumberFormatter::CURRENCY);
+            //echo "<p>Seus <strong> ". numfmt_format_currency($padrao, $real, "BRL")." </strong> equivalem a U$ <strong>" . number_format($valor/$cotacaoFixa,2) . "</strong></p>";
+            
+            echo "<p>Seus <strong>  ". number_format($valor, 2 , "," , "." )." </strong> equivalem a U$ <strong>" . number_format($valor/$cotacaoFixa,2 , "," , ".") . "</strong></p>";
         ?>
-    </section>
+        <button onclick="javascript:history.go(-1)">Voltar</button>
+    </main>
 </body>
 </html>
