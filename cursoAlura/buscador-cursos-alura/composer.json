@@ -1,0 +1,23 @@
+{
+    "name": "gabrielrogerdelano/buscador-cursos",
+    "description": "Projeto que busca os cursosno site da Alura",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Roger",
+            "email": "122801172+GabrielRogerDelano@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.6.1",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "cursoAlura\\buscadorDeCursos\\" : "src/"
+        }
+    }
+
+}
