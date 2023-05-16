@@ -1,13 +1,12 @@
 <?php
 
-namespace cursoAlura\BuscadorDeCursos;
+namespace cursoAlura\buscador-cursos-alura;
 
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 class Buscador
 {
-    
     /*
         @var ClientInterface
     */

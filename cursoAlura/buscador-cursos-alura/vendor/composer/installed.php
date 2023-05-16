@@ -3,7 +3,7 @@
         'name' => 'gabrielrogerdelano/buscador-cursos',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '51daa94bf8c74effed48f78a697587cd64725151',
+        'reference' => 'f7eb8a188548da004a4c13c780b6c42db0808fcb',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'gabrielrogerdelano/buscador-cursos' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '51daa94bf8c74effed48f78a697587cd64725151',
+            'reference' => 'f7eb8a188548da004a4c13c780b6c42db0808fcb',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
