@@ -1,0 +1,22 @@
+{
+    "name": "gabrielrogerdelano/buscador-cursos",
+    "description": "Projeto que busca os cursos da Alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Gabrielrogerdelano\\BuscadorCursos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Roger",
+            "email": "122801172+GabrielRogerDelano@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.6",
+        "symfony/dow-crawler": "^4.0",
+        "symfony/css-selector": "^6.2"
+        
+    }
+}
