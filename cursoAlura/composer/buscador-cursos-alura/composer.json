@@ -3,8 +3,14 @@
     "description": "Projeto que busca os cursos da Alura",
     "type": "library",
     "autoload": {
+        "classmap": [
+            "./Teste.php"
+        ],
+        "files": [
+            "./funcoes.php"
+        ],
         "psr-4": {
-            "Gabrielrogerdelano\\BuscadorCursos\\": "src/"
+            "Gabrielrogerdelano\\BuscadorDeCursos\\": "src/"
         }
     },
     "authors": [
@@ -15,8 +21,7 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.6",
-        "symfony/dow-crawler": "^4.0",
+        "symfony/dom-crawler": "^6.2",
         "symfony/css-selector": "^6.2"
-        
     }
 }
