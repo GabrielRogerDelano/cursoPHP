@@ -28,11 +28,17 @@
         <?php
             $quociente = (int) $dividendo/$divisor;
             $resto = $dividendo%$quociente;
-
-            echo "resultado = ".number_format($quociente,0)."<br> resto = $resto";
-
-            //echo "<p>A soma dos valores $valor1 e $valor2 é ".$valor1 + $valor2." </p>"
         ?>
+        <table class    ="divisao">
+            <tr>
+                <td><?=$dividendo?></td>
+                <td><?=$divisor?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$quociente?></td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>

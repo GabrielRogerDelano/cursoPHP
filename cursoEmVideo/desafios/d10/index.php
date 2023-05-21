@@ -12,7 +12,7 @@
         <?php 
         //capturando os dados do formulario
             $anoNasc = $_GET["anoNasc"] ?? 2000;
-            $anoAtual = $_GET["anoAtual"] ?? 2023;
+            $anoAtual = date("Y");
         ?>
         <h1>Calculando sua idade</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">

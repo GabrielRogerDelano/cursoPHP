@@ -13,7 +13,7 @@
         //capturando os dados do formulario
             $raiz = $_GET["raiz"] ?? 0;
         ?>
-        <h1>Informe seu salário</h1>
+        <h1>Informe um número</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="raiz">Número</label>
             <input type="number" name="raiz" value="<?=$raiz?>">
@@ -24,7 +24,7 @@
         <h2>resultado Final</h2>
         <?php
             $raizQuadrada = sqrt($raiz);
-            $raizCubica = pow($raiz,1/3);
+            $raizCubica = pow($raiz, 1/3);
             echO "<p>Analisando o <strong>número $raiz</strong>, temos :<br> 
             <ul>
                 <li>A sua raiz quadrada é <strong>".number_format($raizQuadrada,3)."</strong></li>
