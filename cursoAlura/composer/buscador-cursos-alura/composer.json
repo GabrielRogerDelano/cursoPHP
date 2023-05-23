@@ -33,9 +33,13 @@
         "test": "phpunit tests\\TestBuscadorDeCursos.php",
         "cs": "phpcs --standard=PSR12 src/",
         "phan": "phan --allow-polyfill-parser",
+        "exibe-cursos": "Namespace\\Da\\Classe::metodo",
         "check": [
             "@phan",
             "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
             "@test"
         ]
     },
