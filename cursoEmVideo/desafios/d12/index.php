@@ -28,6 +28,7 @@
             $a = $segundos % $semanas;
             /*
             
+            
             */
             echO "<p>Analisandos o número que você digitou, <strong>".$segundos." segundos </strong> equivalem a um total de :</p>";
         ?>
