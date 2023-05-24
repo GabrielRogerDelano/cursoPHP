@@ -4,7 +4,7 @@
     "license": "MIR",
     "autoload": {
         "psr-4": {
-            "PDO\\Domain\\Model": "src/PDO/Domain/Model"
+            "Gabrielrogerdelano\\Pdo\\": "src/"
         }
     },
     "authors": [
@@ -12,6 +12,5 @@
             "name": "Gabriel Roger",
             "email": "122801172+GabrielRogerDelano@users.noreply.github.com"
         }
-    ],
-    "require": {}
+    ]
 }
