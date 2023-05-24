@@ -1,0 +1,17 @@
+{
+    "name": "gabrieltoger/pdo-alura",
+    "description": "Cutso de pdo da alura",
+    "license": "MIR",
+    "autoload": {
+        "psr-4": {
+            "Gabrieltoger\\PdoAlura\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Roger",
+            "email": "122801172+GabrielRogerDelano@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
