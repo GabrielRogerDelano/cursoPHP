@@ -4,7 +4,7 @@
     "license": "MIR",
     "autoload": {
         "psr-4": {
-            "Gabrieltoger\\PdoAlura\\": "src/"
+            "PDO\\Domain\\Model": "src/PDO/Domain/Model"
         }
     },
     "authors": [
