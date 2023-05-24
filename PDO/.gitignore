@@ -1,2 +1,3 @@
-.ideal/
-vendor/
+.idea
+vendor
+banco.sqlite

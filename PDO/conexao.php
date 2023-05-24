@@ -1,8 +1,8 @@
 <?php
 
-$caminhoBanco = __DIR__ . '/banco.sqlite';
+$databasePath = __DIR__ . '/banco.sqlite';
+$pdo = new PDO('sqlite:' . $databasePath);
 
-$pdo = new PDO(dsn:'sqlite:' . $caminhoBanco);
+echo 'Conectei';
 
-echo 'conectei';
-?>
+$pdo->exec('CREATE TABLE students(id INTEGER PRIMARY kEY, name TEXT, birth_date TEXT);');

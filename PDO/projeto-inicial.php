@@ -1,12 +1,12 @@
 <?php 
  
-use PDO\Domain\Model\Student;
-require_once 'vendor/autoload.php';
+use Gabrielrogerdelano\Pdo\Domain\Model\Student;
+require 'vendor/autoload.php';
 
 $student = new Student(
-    id:null,
-    name:'rafael',
-    new \DateTimeImmutable(time:'2007-05-22')
+    null,
+    'rafael',
+    new \DateTimeImmutable('2007-05-22')
 );
 
 echo $student->age();
