@@ -2,7 +2,7 @@
 
 use Gabrielrogerdelano\Pdo\Domain\Model\Student;
 
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 $databasePath = __DIR__ . '/banco.sqlite';
 $pdo = new PDO('sqlite:' . $databasePath);
