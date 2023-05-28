@@ -1,7 +1,8 @@
 <?php
 
-$databasePath = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $databasePath);
+use Gabrielrogerdelano\Pdo\Infrastructure\Persistence\ConnectionCreator;
+
+$pdo = ConnectionCreator::createConnection();
 
 echo 'Conectei';
 
