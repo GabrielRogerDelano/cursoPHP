@@ -4,7 +4,7 @@ namespace  Gabrielrogerdelano\Pdo\Infrastructure\Repository;
 
 use DateTimeInterface;
 use Gabrielrogerdelano\Pdo\Domain\Model\Student;
-use  Gabrielrogerdelano\Pdo\Domain\Repository\StudentRepository;
+use Gabrielrogerdelano\Pdo\Domain\Repository\StudentRepository;
 use Gabrielrogerdelano\Pdo\Infrastructure\Persistence\ConnectionCreator;
 use PDO;
 
@@ -35,15 +35,6 @@ class PdoStudentRepository implements StudentRepository
         return $this->hydrateStudentList($stmt);    
     }
 
-    public function save(Student $student): bool
-    {
-        if($student->id() === null){
-            return $this->insert($student);
-        }
-
-        return $this->update($student);
-    }
-
     private function hydrateStudentList(\PDOStatement $stmt): array
     {
         $studentDataList = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -58,6 +49,15 @@ class PdoStudentRepository implements StudentRepository
         }
 
         return $studentList;
+    }
+
+    public function save(Student $student): bool
+    {
+        if($student->id() === null){
+            return $this->insert($student);
+        }
+
+        return $this->update($student);
     }
 
     private function insert(Student $student): bool
