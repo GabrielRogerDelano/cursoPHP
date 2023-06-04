@@ -5,16 +5,15 @@ namespace  Gabrielrogerdelano\Pdo\Infrastructure\Repository;
 use DateTimeInterface;
 use Gabrielrogerdelano\Pdo\Domain\Model\Student;
 use Gabrielrogerdelano\Pdo\Domain\Repository\StudentRepository;
-use Gabrielrogerdelano\Pdo\Infrastructure\Persistence\ConnectionCreator;
 use PDO;
 
 class PdoStudentRepository implements StudentRepository
 {
     private PDO $connection;
     
-    public function __construct()
+    public function __construct(PDO $connection)
     {
-        $this->connection=ConnectionCreator::createConnection();
+        $this->connection=$connection;
     }
 
     public function allStudents(): array
