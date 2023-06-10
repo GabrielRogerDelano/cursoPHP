@@ -3,6 +3,7 @@
 namespace  Gabrielrogerdelano\Pdo\Infrastructure\Repository;
 
 use DateTimeInterface;
+use ErrorException;
 use Gabrielrogerdelano\Pdo\Domain\Model\Student;
 use Gabrielrogerdelano\Pdo\Domain\Repository\StudentRepository;
 use PDO;
@@ -63,6 +64,10 @@ class PdoStudentRepository implements StudentRepository
     {
         $insertQuery = 'INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);';
         $stmt = $this->connection->prepare($insertQuery);
+
+        if ($stmt === false){
+            throw new \RuntimeException('erro na query do banco');
+        }
 
         $success = $stmt->execute([
             ':name' => $student->name(),
