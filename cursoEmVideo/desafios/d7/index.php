@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="salario">Salário(R$)</label>
             <input type="number" name="salario" value="<?=$salario?>">
-            <p>Considerando o salário minimo de <strong>R$<?php echo number_format($salarioMin,2 , ',','.');?></strong></p>
+            <p>Considerando o salário minimo de <strong>R$<?php echo number_format($salarioMin, 2, ',','.');?></strong></p>
             <input type="submit" value="calcular">
         </form>
     </main>
