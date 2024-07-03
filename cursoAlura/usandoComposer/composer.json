@@ -1,0 +1,20 @@
+{
+    "name": "roger/usando-composer",
+    "description": "projeto para buscar Cursos da alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Roger\\UsandoComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/dom-crawler": "^7.1",
+        "symfony/css-selector": "^7.1"
+     }
+}
