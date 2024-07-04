@@ -10,6 +10,7 @@ $pdo = new PDO('sqlite:' . $databasePath);
 $statement = $pdo->query("SELECT * FROM students");
 $studentDataList = $statement->fetchAll(PDO::FETCH_ASSOC);
 $studentList = [];
+
 foreach($studentDataList as $studentData){
     $studentList[] = new Student(
         $studentData['id'],
